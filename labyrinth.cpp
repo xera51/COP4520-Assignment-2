@@ -5,7 +5,7 @@
 #include <mutex>
 #include <thread>
 
-void cupcake(int n);
+void labyrinth(int n);
 void counter(int n);
 void maze();
 
@@ -26,7 +26,7 @@ int main(int argc, char ** argv)
 
 	std::cout << "Starting the game with " << n << " guests!\n";
 	auto start = std::chrono::high_resolution_clock::now();
-	cupcake(n);
+	labyrinth(n);
 	auto end = std::chrono::high_resolution_clock::now();
 	std::cout << "Done!\n";
 	std::cout << "The guests took " 
@@ -36,7 +36,7 @@ int main(int argc, char ** argv)
 	return 0;
 }
 
-void cupcake(int n)
+void labyrinth(int n)
 {
 	std::thread guests[n];
 
